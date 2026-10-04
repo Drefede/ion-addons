@@ -1,0 +1,41 @@
+name: "ION Edge"
+version: "0.102.0"
+image: "ghcr.io/drefede/{arch}-ion-edge"
+slug: ion-edge
+description: "Agente local de ION. Necesita ION Edge DB instalado y en marcha."
+arch:
+  - aarch64
+init: false
+startup: application
+boot: auto
+map:
+  - type: media
+    read_only: false
+backup_exclude:
+  - "ion-edge/claves/video.key"
+  - "**/claves/video.key"
+host_network: false
+options:
+  db_host: "64bd34d1-ion-edge-db"
+  db_port: 5432
+  db_password: ""
+  local_api_token: ""
+  control_waterfall: false
+  banco_tuya: false
+schema:
+  db_host: str
+  db_port: int(1,65535)
+  db_password: password
+  local_api_token: password?
+  control_waterfall: bool?
+  banco_tuya: bool?
+  lan_subredes:
+    - str?
+  proteccion_local: list(off|certificacion)?
+  actuacion_fisica: list(habilitada|inhibida)?
+  cloud_url: url?
+  cambiar_cloud_url: url?
+  pairing_codigo: password?
+  ha_url: str?
+  ha_token: password?
+  reconfigurar_ha: bool?

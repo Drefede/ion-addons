@@ -1,0 +1,27 @@
+name: "ION Web"
+version: "0.106.1"
+image: "ghcr.io/drefede/{arch}-ion-web"
+slug: ion-web
+description: "Interfaz de ION servida en tu red local."
+arch:
+  - aarch64
+init: false
+startup: application
+boot: auto
+options:
+  cloud_url: "https://calculadora-consumos-datapad.onrender.com"
+  home_assistant_origin: "http://homeassistant.local:8123"
+  edge_local_url: ""
+  edge_local_token: ""
+  control_waterfall: false
+schema:
+  cloud_url: url
+  home_assistant_origin: url
+  edge_local_url: str?
+  edge_local_token: password?
+  control_waterfall: bool?
+ports:
+  8099/tcp: 8099
+ports_description:
+  8099/tcp: "ION Web (LAN)"
+webui: "http://[HOST]:[PORT:8099]"

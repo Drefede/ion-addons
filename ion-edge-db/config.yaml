@@ -1,0 +1,15 @@
+name: "ION Edge DB"
+version: "0.1.0"
+image: "ghcr.io/drefede/{arch}-ion-edge-db"
+slug: ion-edge-db
+description: "Base de datos local de ION Edge. Solo la usa ION Edge; no se publica en la red."
+arch:
+  - aarch64
+init: false
+startup: system
+boot: auto
+backup: cold
+options:
+  db_password: ""
+schema:
+  db_password: password

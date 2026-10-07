@@ -1,5 +1,5 @@
 name: "ION Edge"
-version: "0.104.0"
+version: "0.105.0"
 image: "ghcr.io/drefede/{arch}-ion-edge"
 slug: ion-edge
 description: "Agente local de ION. Necesita ION Edge DB instalado y en marcha."

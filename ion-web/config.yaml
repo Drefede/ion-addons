@@ -1,5 +1,5 @@
 name: "ION Web"
-version: "0.108.0"
+version: "0.108.1"
 image: "ghcr.io/drefede/{arch}-ion-web"
 slug: ion-web
 description: "Interfaz de ION servida en tu red local."
